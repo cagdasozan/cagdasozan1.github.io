@@ -1,4 +1,7 @@
 /* nav */
+html, body {
+    height: 100%;
+}
 body {
     max-width: 900px;
     margin: 0 auto;
@@ -6,6 +9,11 @@ body {
     flex-direction: column;
     font-family: "Open Sans", sans-serif;
 }
+
+h2 {
+    font-family: "Proza Libre",sans-serif;
+}
+
 nav {
     display: flex;
 }
@@ -28,7 +36,7 @@ li {
 
 a {
     text-decoration: none;
-    font-weight: 600;
+    font-weight: bold;
     color: black;
 }
 
@@ -49,4 +57,42 @@ a {
 p {
     margin: 16px 0px;
 
+}
+
+#projects {
+    margin-bottom: 4em;
+}
+
+.project-title h3 {
+    display: inline;
+}
+
+details {
+    cursor: pointer;
+    margin-bottom: 5px;
+}
+
+.skills-container {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    
+}
+
+i {
+    font-size: 2em;
+    width: 2em;
+    margin-bottom: 1em;
+}
+
+footer {
+    display: block;
+    text-align: center;
+    margin-top: auto;
+    padding: 12px 0;
+}
+
+.hearth {
+    color: red;
 }
