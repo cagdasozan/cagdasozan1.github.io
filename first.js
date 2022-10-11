@@ -1,29 +1,16 @@
-messagesDay = ['bad','excellent','so-so','too bad','normal','lovely'];
-messagesWeather = ['rainy','sunny','snowy','windy','too bad'];
-messagesDie = ['2 years','5 years','1 week','2 weeks'];
 
-function getDay () {
-    i = Math.floor(Math.random()*6); 
+    const timeContainer = document.getElementById("time-container");
+    const BIRTH_DAY = "27-08-1992";
+    const BIRTH_DAY_DATE = new Date(BIRTH_DAY);
+    console.log(BIRTH_DAY_DATE);
+    const intlNumberFormatter = new Intl.NumberFormat("en-US");
 
-    return console.log(`Your day will be ${messagesDay[i]}`);
-}
+    setInterval(() => {
+      const now = new Date();
+      const difference = Math.floor(
+        (now.getTime() - BIRTH_DAY_DATE.getTime()) / 1000
+      );
 
-function getWeather () {
-    i = Math.floor(Math.random()*5); 
-
-    return console.log(`Today will be ${messagesWeather[i]}`);
-}
-
-function getDie () {
-    i = Math.floor(Math.random()*4); 
-
-    return console.log(`You will die in ${messagesDie[i]}`);
-}
-
-function combined () {
-    getDay();
-    getWeather();
-    getDie();
-}
-
-combined();
+      timeContainer.innerHTML = intlNumberFormatter.format(difference);
+    }, 1000);
+  
